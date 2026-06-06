@@ -2,7 +2,7 @@
 <html lang="zh-TW">
 <head>
   <meta charset="UTF-8">
-  <title>3D 手勢魔術方塊</title>
+  <title>3D 手勢魔術方塊遊戲</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.js"></script>
   <script src="https://unpkg.com/ml5@0.12.2/dist/ml5.min.js"></script>
   <style>
@@ -13,14 +13,25 @@
       justify-content: center;
       align-items: center;
       height: 100vh;
-      background-color: #222;
+      background-color: #111;
+      color: white;
+      font-family: sans-serif;
     }
     canvas {
-      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+      box-shadow: 0 0 30px rgba(0, 255, 255, 0.2);
+      border-radius: 10px;
+    }
+    #loading {
+      position: absolute;
+      font-size: 24px;
+      font-weight: bold;
+      color: #00ffcc;
+      z-index: 10;
     }
   </style>
 </head>
 <body>
+  <div id="loading">載入 AI 模型與攝影機中，請稍候...</div>
   <script src="sketch.js"></script>
 </body>
 </html>
